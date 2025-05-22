@@ -7,7 +7,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-# Install the browser binaries
 RUN playwright install
 
 CMD ["python", "botOlx.py"]
