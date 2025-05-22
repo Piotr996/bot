@@ -1,0 +1,12 @@
+services:
+  - type: cron
+    name: olx-bot
+    env: python
+    schedule: "*/5 * * * *"
+    buildCommand: ""
+    startCommand: "python botOlx.py"
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: CHAT_ID
+        sync: false
