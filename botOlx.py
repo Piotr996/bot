@@ -8,8 +8,8 @@ from playwright.async_api import async_playwright
 from telegram import Bot
 
 SEARCH_URL = "https://www.olx.pl/goluchow_115019/q-iphone/?search[dist]=50&search[filter_float_price:from]=450&search[filter_float_price:to]=2400&search[order]=created_at:desc"
-BOT_TOKEN = os.getenv("BOT_TOKEN")
-CHAT_ID = os.getenv("CHAT_ID")
+BOT_TOKEN = os.getenv("7733178390:AAE_MHF6Pui_WYtVTWbaxILebeIgkzmZPs4")
+CHAT_ID = os.getenv("6699222567")
 SEEN_FILE = "seen_ads.json"
 CSV_FILE = "iphone_prices.csv"
 
