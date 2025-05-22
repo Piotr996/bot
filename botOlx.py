@@ -10,6 +10,8 @@ from telegram import Bot
 SEARCH_URL = "https://www.olx.pl/goluchow_115019/q-iphone/?search[dist]=50&search[filter_float_price:from]=450&search[filter_float_price:to]=2400&search[order]=created_at:desc"
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 CHAT_ID = os.getenv("CHAT_ID")
+
+bot = Bot(token=BOT_TOKEN)  # <- DODAJ TO!
 SEEN_FILE = "seen_ads.json"
 CSV_FILE = "iphone_prices.csv"
 
