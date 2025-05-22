@@ -3,7 +3,11 @@ services:
     name: olx-bot
     env: python
     schedule: "*/5 * * * *"
-    startCommand: ".venv/bin/playwright install && .venv/bin/python botOlx.py"
+    startCommand: |
+      echo "✅ Installing Playwright browsers..." &&
+      .venv/bin/python -m playwright install &&
+      echo "✅ Launching bot..." &&
+      python botOlx.py
     envVars:
       - key: BOT_TOKEN
         sync: false
