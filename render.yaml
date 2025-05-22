@@ -3,8 +3,7 @@ services:
     name: olx-bot
     env: python
     schedule: "*/5 * * * *"
-    buildCommand: ""
-    startCommand: "python botOlx.py"
+    startCommand: "playwright install && python botOlx.py"
     envVars:
       - key: BOT_TOKEN
         sync: false
