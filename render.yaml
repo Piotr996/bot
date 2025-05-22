@@ -1,11 +1,9 @@
 services:
   - type: web
     name: olx-bot
-    env: python
-    buildCommand: |
-      pip install -r requirements.txt
-      python -m playwright install
-    startCommand: python botOlx.py
+    env: docker
+    plan: free
+    autoDeploy: true
     envVars:
       - key: BOT_TOKEN
         sync: false
