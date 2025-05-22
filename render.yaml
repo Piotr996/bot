@@ -1,13 +1,11 @@
 services:
-  - type: cron
+  - type: web
     name: olx-bot
     env: python
-    schedule: "*/5 * * * *"
-    startCommand: |
-      echo "✅ Installing Playwright browsers..." &&
-      .venv/bin/python -m playwright install &&
-      echo "✅ Launching bot..." &&
-      python botOlx.py
+    buildCommand: |
+      pip install -r requirements.txt
+      python -m playwright install
+    startCommand: python botOlx.py
     envVars:
       - key: BOT_TOKEN
         sync: false
