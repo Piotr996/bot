@@ -74,8 +74,12 @@ async def fetch_ads(bot: Bot):
         save_seen_ads(seen_ads)
 
 async def main_loop():
-    bot = Bot(token=BOT_TOKEN)
-    await fetch_ads(bot)
+    while True:
+        try:
+            await fetch_ads(bot)
+        except Exception as e:
+            print(f"❌ Błąd: {e}")
+        await asyncio.sleep(300)
 
 if __name__ == "__main__":
     asyncio.run(main_loop())
